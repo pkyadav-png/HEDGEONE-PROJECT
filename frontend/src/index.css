@@ -1,0 +1,295 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+.dashboard-heading {
+  font-size: 2.6rem;
+  font-weight: 700;           /* Ekdum heavy blocky look se hatkar sleek bold */
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  letter-spacing: -1px;       /* Letters thode paas aayenge toh premium dikhega */
+  
+  /* Pure Ice White Base */
+  color: #ffffff; 
+  
+  /* Subtle Tech Glow (Piche halka blue aur cyan ka mix glow) */
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.25), 
+               0 0 40px rgba(0, 119, 255, 0.15);
+}
+
+/* Premium Glassmorphic Form Card */
+.premium-form-card {
+  background: rgba(255, 255, 255, 0.03); /* Ekdum soft transparency */
+  backdrop-filter: blur(16px);          /* Glass blur effect */
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Ekdum patli, subtle border jo dark screen par rich dikhti hai */
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+  border-radius: 16px;
+  padding: 30px;
+  
+  /* Smooth shadow jo form ko thoda upar utha hua dikhayegi */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  margin-bottom: 35px;
+}
+
+/* Form ke andar jo heading hai (Create New Task) */
+.premium-form-card h4 {
+  color: #9ca3af !important;             /* Elegant muted grey color */
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+/* Normal state - jab button par mouse nahi hai */
+.premium-save-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0077ff, #0055cc); /* Premium Blue Gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /*  Yeh line bohot zaroori hai animation ko smooth banane ke liye */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* Hover state - Jab mouse button ke upar aayega  */
+.premium-save-btn:hover {
+  transform: translateY(-2px); /* Button smoothly 2px upar uthega */
+  background: linear-gradient(135deg, #0088ff, #0066ee); /* thoda bright gradient */
+  
+  /* Ek dum sleek premium neon blue glow background par */
+  box-shadow: 0 8px 25px rgba(0, 119, 255, 0.45); 
+}
+
+/* Active state - Jab button par click karenge */
+.premium-save-btn:active {
+  transform: translateY(0); /* Click karte hi wapas normal position pe aayega */
+}
+
+/* Main Task Card Container - Smooth Dark Translucent */
+.premium-task-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect - Card thoda upar uthega */
+.premium-task-card:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Task Title (Heading) ko ekdum Crisp White kiya */
+.premium-task-card h5 {
+  color: #ffffff !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.2px;
+}
+
+/* Task Description (Paragraph) ka color fix */
+.premium-task-card p {
+  color: #9ca3af !important; /* Premium muted grey */
+  font-size: 0.95rem !important;
+}
+
+/* Due Date and Status text */
+.premium-task-card small {
+  color: #6b7280 !important;
+  font-size: 0.85rem !important;
+  font-weight: 500;
+}
+
+/* Task List Section ka Title (Task List (7)) */
+h4 {
+  color: #9ca3af !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Sleek & Premium Green Edit Button 💚 */
+.edit-task-btn {
+  background: rgba(16, 185, 129, 0.12) !important; /* Soft Translucent Emerald Green */
+  color: #10b981 !important;                       /* Pure Electric Green Text */
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect - button smoothly glow karega aur bada hoga */
+.edit-task-btn:hover {
+  background: #10b981 !important;                  /* Solid Green on Hover */
+  color: #ffffff !important;                       /* White Text */
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important; /* Mint Green Glow */
+  transform: translateY(-1px);
+}
+
+/* Active State - Click karne par bounce back */
+.edit-task-btn:active {
+  transform: translateY(0);
+}
+
+/* Sleek & Premium Red Delete Button ❤️ */
+.delete-task-btn {
+  background: rgba(244, 63, 94, 0.12) !important; /* Soft Translucent Red */
+  color: #f43f5e !important;                       /* Pure Electric Red Text */
+  border: 1px solid rgba(244, 63, 94, 0.3) !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect - smooth red glow */
+.delete-task-btn:hover {
+  background: #f43f5e !important;                  /* Solid Red on Hover */
+  color: #ffffff !important;                       /* White Text */
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.4) !important; /* Crimson Red Glow */
+  transform: translateY(-1px);
+}
+
+/* Active State */
+.delete-task-btn:active {
+  transform: translateY(0);
+}
+
+/* Task List (7) Section Heading Style 🚀 */
+h4 {
+  color: #9ca3af !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.3px !important;
+  margin-top: 35px !important;
+  margin-bottom: 15px !important;
+}
