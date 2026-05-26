@@ -47,8 +47,8 @@ Follow these clear steps to clone and run the application locally on your machin
 
 1. Clone the Repository
 ```bash
-git clone [https://github.com/pkyadav-png/HEDGEONE-PROJECT](https://github.com/pkyadav-png/HEDGEONE-PROJECT)
-cd HEDGEONE-PROJECT
+git clone : https://github.com/pkyadav-png/HEDGEONE-PROJECT
+cd : HEDGEONE-PROJECT
 
 2. Environment Configuration
 Create a .env file in your root directory and include your database credentials:
