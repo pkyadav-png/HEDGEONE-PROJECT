@@ -79,6 +79,6 @@ Developer Name: Pappu Kumar (PK Yadav)
 
 Role Applied For: Full Stack Developer Intern (Summer 2026)
 
-Submission Date: May 2026
+Submission Date: 26 May, 2026
 
 Thank you for reviewing my screening project. Looking forward to the opportunity to build custom software solutions with the founding team at HedgeOne Consultants.
